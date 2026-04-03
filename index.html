@@ -7,33 +7,39 @@
 
 <style>
 :root {
-  --bg1: #6e745a;
-  --bg2: #c7d0b5;
-  --card: #eef2e4;
-  --accent: #8b0000;
-  --green: #6b7c52;
-  --pill: #dbe5cc;
+  --bg1: #3a5a40;
+  --bg2: #a3b18a;
+  --card: rgba(255,255,255,0.85);
+  --accent: #9b2226;
+  --text: #1b263b;
+  --pill: #e9f5db;
+  --border: #b7c9a8;
 }
 
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(180deg, var(--bg1), var(--bg2));
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
+/* main card */
 .container {
   width: 100%;
-  max-width: 650px;
+  max-width: 600px;
   background: var(--card);
-  border-radius: 30px;
-  margin: 40px 10px;
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
   padding: 35px 25px;
+  margin: 20px;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
+/* logo */
 .logo {
   width: 110px;
   height: 110px;
@@ -41,55 +47,62 @@ body {
   margin: auto;
   overflow: hidden;
   border: 4px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 .logo img {
   width: 100%;
 }
 
+/* title */
 h1 {
   color: var(--accent);
   margin-top: 15px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .subtitle {
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
+/* section */
 .section {
-  margin-top: 28px;
+  margin-top: 30px;
   color: var(--accent);
   font-weight: 700;
   font-size: 18px;
 }
 
+/* buttons */
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 14px 0;
-  padding: 16px;
-  border-radius: 50px;
+  margin: 12px 0;
+  padding: 15px;
+  border-radius: 40px;
   background: var(--pill);
-  border: 2px solid #9eab8e;
+  border: 1.5px solid var(--border);
   text-decoration: none;
-  color: #2f3a1f;
+  color: var(--text);
   font-weight: 600;
-  font-size: 16px;
-  box-shadow: 5px 6px 0 rgba(120,130,100,0.6);
-  transition: all 0.2s ease;
+  font-size: 15px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+/* hover effect */
 .link:hover {
-  transform: translateY(-3px);
-  box-shadow: 7px 9px 0 rgba(120,130,100,0.5);
+  transform: translateY(-4px) scale(1.02);
+  background: #d8f3dc;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
+/* footer */
 .footer {
   margin-top: 25px;
-  font-size: 14px;
-  color: #666;
+  font-size: 13px;
+  color: #777;
 }
 </style>
 </head>
@@ -99,20 +112,26 @@ h1 {
 <div class="container">
 
 <div class="logo">
-<img src="https://via.placeholder.com/110" />
+<img src="https://via.placeholder.com/110">
 </div>
 
 <h1>BGSA UTD</h1>
 <p class="subtitle">Bangladesh Graduate Student Association</p>
 
 <div class="section">RSVP</div>
-<a class="link" href="https://docs.google.com/forms/d/1w9Xot9TuUvD4oQiBDzSWI9m2NSE1pvWaOO21TrZ-_o0/preview">BGSA Eid Al Fitr 2026 Celebration RSVP Form</a>
+<a class="link" href="https://docs.google.com/forms/d/1w9Xot9TuUvD4oQiBDzSWI9m2NSE1pvWaOO21TrZ-_o0/preview">
+BGSA Eid Al Fitr 2026 Celebration RSVP Form
+</a>
 
 <div class="section">Membership 🎉</div>
-<a class="link" href="https://docs.google.com/forms/d/12fsUOkKXRUKxWEZIbkHcv7UGQSTdgDkK_3c60rKsdj4/preview">General Membership / Volunteer Sign Up</a>
+<a class="link" href="https://docs.google.com/forms/d/12fsUOkKXRUKxWEZIbkHcv7UGQSTdgDkK_3c60rKsdj4/preview">
+General Membership / Volunteer Sign Up
+</a>
 
 <div class="section">Events</div>
-<a class="link" href="https://example.com/bn-performance">Bangladesh Night Performances</a>
+<a class="link" href="https://example.com/bn-performance">
+Bangladesh Night Performances
+</a>
 
 <div class="section">Follow Us</div>
 <a class="link" href="https://instagram.com">Instagram</a>
@@ -120,14 +139,16 @@ h1 {
 <a class="link" href="https://youtube.com">YouTube</a>
 
 <div class="section">Support & Donate</div>
-<a class="link" href="https://example.com/donate">Donate to BGSA</a>
+<a class="link" href="https://example.com/donate">
+Donate to BGSA
+</a>
 
 <div class="section">UTD Resources</div>
 <a class="link" href="https://example.com/airport">Free Airport Pickup</a>
 <a class="link" href="https://example.com/bus">UTD Bus Schedule</a>
 <a class="link" href="https://example.com/health">UTD Health Center</a>
 
-<p class="footer">Replace links & images with real ones later</p>
+<p class="footer">© BGSA UTD</p>
 
 </div>
 
